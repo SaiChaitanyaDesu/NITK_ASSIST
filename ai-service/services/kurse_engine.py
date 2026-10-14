@@ -76,7 +76,7 @@ def route_query(state: AgentState):
         res = chain.invoke({"query": state["query"]})
         route = res.route
     except Exception:
-        route = "pdf" # fallback
+        route = "pdf" 
     print(f"--> [ROUTER] Decision: {route}")
     return {"route": route, "retry_count": state.get("retry_count", 0)}
 
